@@ -1,66 +1,117 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Eka Lidya Rahmadini
+4523210039
+Praktikum PPBW (B)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# 🌀 LaraPress — Instalasi & Konfigurasi Laravel Breeze
 
-## About Laravel
+Proyek ini menggunakan *Laravel Breeze* sebagai sistem autentikasi dasar dengan dukungan Blade dan Tailwind CSS.  
+Dokumen ini memandu Anda melalui proses instalasi, konfigurasi, serta pemahaman struktur yang dihasilkan oleh Breeze.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## ⚙ Bagian 1: Instalasi Laravel Breeze
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 1️⃣ Masuk ke Direktori Proyek
+Buka terminal dan masuk ke folder proyek *LaraPress*.
 
-## Learning Laravel
+### 2️⃣ Instal Breeze via Composer
+Lakukan instalasi paket *Laravel Breeze* untuk menambahkan fitur autentikasi dasar.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<img width="1365" height="719" alt="image" src="https://github.com/user-attachments/assets/60e6179f-270e-4c16-b2bf-810d03764d61" />
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+### 3️⃣ Jalankan Perintah Instalasi Breeze
+Setelah instalasi selesai, jalankan proses publikasi file Breeze agar semua komponen (controller, view, dan route) ditambahkan ke dalam proyek.  
+Saat proses ini berjalan, pilih opsi berikut:
+- Pilih *Blade with Alpine* (opsi nomor 0)  
+- Pilih *No* untuk Dark Mode support  
+- Pilih *Pest* (opsi nomor 0) sebagai testing framework
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+<img width="1365" height="716" alt="image" src="https://github.com/user-attachments/assets/23ec2f0b-0a92-4992-8ac6-e4935040fdcd" />
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### 4️⃣ Instalasi Dependensi Frontend
+Breeze menggunakan *Tailwind CSS*, sehingga perlu menginstal dependensi JavaScript agar tampilan dapat dikompilasi dengan benar.
 
-## Contributing
+<img width="1365" height="721" alt="image" src="https://github.com/user-attachments/assets/864321de-c768-48bf-8ca8-c37e5d3d6711" />
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
+### 5️⃣ Kompilasi Aset Frontend
+Lakukan proses kompilasi untuk menyiapkan file CSS dan JavaScript yang akan digunakan di browser.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+<img width="470" height="269" alt="image" src="https://github.com/user-attachments/assets/073b10bd-de2f-4d4d-9768-36fedb89d3bb" />
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 6️⃣ Jalankan Migrasi Database
+Migrasi ini menambahkan kolom remember_token pada tabel users dan membuat tabel password_reset_tokens yang dibutuhkan untuk autentikasi.
 
-## License
+<img width="381" height="311" alt="image" src="https://github.com/user-attachments/assets/8a25dde0-18f7-4719-aa29-80c5ce91c729" />
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+### 7️⃣ Jalankan Aplikasi
+Setelah semua langkah selesai, jalankan server Laravel dan buka proyek di browser.  
+Jika berhasil, akan muncul tautan *“Log in”* dan *“Register”* di pojok kanan atas.  
+Cobalah membuat akun baru dan login untuk memastikan sistem autentikasi berfungsi.
+
+<img width="1358" height="679" alt="image" src="https://github.com/user-attachments/assets/86f343ef-0dab-45cf-9102-51e1eda5fb9f" />
+<img width="1362" height="681" alt="image" src="https://github.com/user-attachments/assets/ce2f1cf2-1e24-4cb8-a106-b812f9b58922" />
+
+
+
+
+---
+
+## 🧩 Bagian 2: Membedah Hasil Instalasi Breeze
+
+Bagian ini bertujuan agar Anda memahami apa saja yang telah ditambahkan oleh Breeze ke dalam proyek.
+
+### 🔹 Rute Baru
+Buka file routes/web.php dan perhatikan baris pemanggilan require __DIR__.'/auth.php';.  
+File routes/auth.php berisi semua rute yang berhubungan dengan autentikasi seperti login, register, logout, dan reset password.
+
+### 🔹 Controller Baru
+Masuk ke folder app/Http/Controllers/Auth/.  
+Di sini terdapat beberapa controller baru, seperti:
+- AuthenticatedSessionController untuk menangani proses login dan logout.  
+- RegisteredUserController untuk registrasi pengguna baru.  
+- PasswordResetLinkController untuk fitur lupa kata sandi.
+
+Pelajari isi tiap file untuk memahami logika alur autentikasi di Laravel.
+
+### 🔹 View Baru
+Lihat folder resources/views/auth/.  
+Folder ini berisi semua tampilan form autentikasi, termasuk halaman login, register, dan reset password.
+
+---
+
+## 🔐 Bagian 3: Mengamankan Rute CRUD
+
+Gunakan sistem autentikasi Breeze untuk melindungi fitur-fitur CRUD postingan yang sudah dibuat.
+
+1. Buka file routes/web.php.  
+2. Temukan semua rute yang berkaitan dengan pembuatan, penyimpanan, pengeditan, pembaruan, dan penghapusan postingan.  
+3. Bungkus semua rute tersebut di dalam *route group* yang menggunakan middleware('auth').  
+   Dengan cara ini, hanya pengguna yang sudah login yang dapat mengakses halaman CRUD.  
+4. Setelah itu, logout dari aplikasi lalu coba akses halaman pembuatan postingan secara langsung.  
+   Laravel akan otomatis mengarahkan Anda ke halaman login, menandakan proteksi berhasil.
+
+<img width="1359" height="722" alt="image" src="https://github.com/user-attachments/assets/87d038f6-ecf0-4b87-b072-b14c542b4095" />
+
+
+---
+
+## 🧠 Uji Coba Keamanan
+1. Logout dari akun Anda.  
+2. Coba buka URL pembuatan postingan secara langsung di browser.  
+3. Jika sistem mengarahkan Anda ke halaman login, artinya fitur middleware autentikasi sudah berfungsi dengan benar.
+
+---
+
+## 📚 Kesimpulan
+Setelah mengikuti seluruh langkah:
+- *Laravel Breeze* telah berhasil diinstal dan dikonfigurasi.  
+- Proyek *LaraPress* kini memiliki sistem autentikasi lengkap (login, register, logout).  
+- Semua fitur CRUD postingan kini dilindungi oleh autentikasi pengguna.
+
+---
